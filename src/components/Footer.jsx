@@ -13,9 +13,9 @@ const Footer = () => {
     <footer id="contact" className="footer">
       <div className="container footer-container">
         <div className="footer-col">
-          <h3 className="footer-title">Aayushi Glam Studio</h3>
+          <h3 className="footer-title">Makeover With Aayushi</h3>
           <p className="footer-desc">
-            Bridal makeup artist from Pune/Mumbai, India. Makeup Educator. Conducts makeup and hairstyle courses.
+            Bridal makeup artist from Indore India. Makeup Educator. Conducts makeup and hairstyle courses.
           </p>
           <div className="footer-socials">
             <a href="https://instagram.com/makeover_with_aayushi" target="_blank" rel="noreferrer"><InstagramIcon /></a>
@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="footer-col">
           <h4 className="footer-subtitle">Find Us</h4>
           <p className="footer-contact-item">
-            <MapPin size={18} /> Indore, Madhya Pradesh
+            <MapPin size={18} /> Nandbagh, D sector, gali no 9, Indore, Madhya Pradesh
           </p>
           <h4 className="footer-subtitle" style={{ marginTop: '1.5rem' }}>Contact</h4>
           <p className="footer-contact-item">
