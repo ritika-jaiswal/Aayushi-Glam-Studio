@@ -87,7 +87,8 @@ const Hero = () => {
     }
   };
 
-  const todayDate = new Date().toISOString().split('T')[0];
+  const today = new Date();
+  const todayDate = new Date(today.getTime() - (today.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
 
   return (
     <section id="home" className="hero-section">
