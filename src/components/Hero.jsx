@@ -59,7 +59,7 @@ const Hero = () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+          access_key: "bd3578f9-2f31-413e-a7b7-ed979b81adf1",
           subject: `New Booking Inquiry from ${formData.name}`,
           from_name: "Aayushi Glam Website",
           Name: formData.name,
