@@ -13,7 +13,7 @@
   position: relative;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .portfolio-img-wrapper {
@@ -34,7 +34,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   padding: 2rem 1.5rem 1.5rem;
   color: var(--white);
   transform: translateY(20px);
@@ -76,7 +76,7 @@
 
 .filter-btn {
   background: transparent;
-  border: 1px solid var(--text-muted);
+  border: 1px solid rgba(45, 45, 45, 0.3);
   color: var(--text-primary);
   padding: 0.5rem 1.5rem;
   border-radius: 30px;
@@ -86,7 +86,8 @@
   transition: all 0.3s ease;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
   background: var(--primary-color);
   color: var(--white);
   border-color: var(--primary-color);
@@ -154,7 +155,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
 
@@ -216,16 +217,34 @@
   .lightbox-nav.prev {
     left: 10px;
   }
+
   .lightbox-nav.next {
     right: 10px;
   }
+
   .lightbox-title {
     top: 1rem;
     left: 1rem;
     font-size: 1rem;
   }
+
   .lightbox-close {
     top: 1rem;
     right: 1rem;
+  }
+
+  .portfolio-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1.5rem 1rem 1rem;
   }
 }
