@@ -32,7 +32,7 @@ const Footer = () => {
             <Phone size={18} /> +91 9617616674
           </p>
           <p className="footer-contact-item">
-            <Mail size={18} /> <a href="mailto:reetikajaiswal0911@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}> reetikajaiswal0911@gmail.com</a>
+            <Mail size={18} /> <a href="mailto:aayushimakeover03@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}> aayushimakeover03@gmail.com</a>
           </p>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Hero = () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: "bd3578f9-2f31-413e-a7b7-ed979b81adf1",
+          access_key: "a5599f76-2069-471b-aa0a-1f395af90694",
           subject: `New Booking Inquiry from ${formData.name}`,
           from_name: "Aayushi Glam Website",
           Name: formData.name,
@@ -86,6 +86,8 @@ const Hero = () => {
       setIsSubmitting(false);
     }
   };
+
+  const todayDate = new Date().toISOString().split('T')[0];
 
   return (
     <section id="home" className="hero-section">
@@ -172,8 +174,8 @@ const Hero = () => {
                   <div className="form-group">
                     <label>Service Required</label>
                     <div className="custom-dropdown">
-                      <div 
-                        className={`dropdown-selected ${isDropdownOpen ? 'open' : ''}`} 
+                      <div
+                        className={`dropdown-selected ${isDropdownOpen ? 'open' : ''}`}
                         onClick={(e) => {
                           e.stopPropagation();
                           setIsDropdownOpen(!isDropdownOpen);
@@ -185,14 +187,14 @@ const Hero = () => {
                       <AnimatePresence>
                         {isDropdownOpen && (
                           <>
-                            <div 
-                              style={{position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999}} 
+                            <div
+                              style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setIsDropdownOpen(false);
                               }}
                             />
-                            <motion.div 
+                            <motion.div
                               className="dropdown-options"
                               initial={{ opacity: 0, y: -10 }}
                               animate={{ opacity: 1, y: 0 }}
@@ -200,8 +202,8 @@ const Hero = () => {
                               transition={{ duration: 0.2 }}
                             >
                               {["Bridal Makeup", "Pre-Wedding Shoot", "Party / Engagement Makeup", "Photoshoot / Editorial"].map(option => (
-                                <div 
-                                  key={option} 
+                                <div
+                                  key={option}
                                   className="dropdown-option"
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -221,7 +223,7 @@ const Hero = () => {
 
                   <div className="form-group">
                     <label>Event Date</label>
-                    <input type="date" name="date" required value={formData.date} onChange={handleInputChange} />
+                    <input type="date" name="date" required min={todayDate} value={formData.date} onChange={handleInputChange} />
                   </div>
 
                   {submitStatus === 'error' && (
