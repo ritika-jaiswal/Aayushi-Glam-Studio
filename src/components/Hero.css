@@ -286,8 +286,7 @@
   letter-spacing: 1px;
 }
 
-.form-group input,
-.form-group select {
+.form-group input {
   padding: 0.8rem 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -297,10 +296,60 @@
   transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
   outline: none;
   border-color: var(--primary-color);
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-selected {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown-selected:hover,
+.dropdown-selected.open {
+  border-color: var(--primary-color);
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-option {
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background: var(--bg-secondary);
 }
 
 .btn-full {

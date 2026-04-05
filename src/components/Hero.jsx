@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, ChevronDown } from 'lucide-react';
 
 import heroImage1 from "../assets/Aayushi_pic's/Aayushi_Home_page_pic.jpeg";
 import heroImage2 from '../assets/Bride/WhatsApp Image 2026-04-04 at 11.35.15 PM.jpeg';
@@ -14,6 +14,7 @@ const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', service: 'Bridal Makeup', date: '' });
 
   useEffect(() => {
@@ -170,12 +171,52 @@ const Hero = () => {
 
                   <div className="form-group">
                     <label>Service Required</label>
-                    <select name="service" required value={formData.service} onChange={handleInputChange}>
-                      <option value="Bridal Makeup">Bridal Makeup</option>
-                      <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
-                      <option value="Party / Engagement Makeup">Party / Engagement Makeup</option>
-                      <option value="Photoshoot / Editorial">Photoshoot / Editorial</option>
-                    </select>
+                    <div className="custom-dropdown">
+                      <div 
+                        className={`dropdown-selected ${isDropdownOpen ? 'open' : ''}`} 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsDropdownOpen(!isDropdownOpen);
+                        }}
+                      >
+                        {formData.service}
+                        <ChevronDown size={18} />
+                      </div>
+                      <AnimatePresence>
+                        {isDropdownOpen && (
+                          <>
+                            <div 
+                              style={{position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999}} 
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setIsDropdownOpen(false);
+                              }}
+                            />
+                            <motion.div 
+                              className="dropdown-options"
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -10 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              {["Bridal Makeup", "Pre-Wedding Shoot", "Party / Engagement Makeup", "Photoshoot / Editorial"].map(option => (
+                                <div 
+                                  key={option} 
+                                  className="dropdown-option"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setFormData(prev => ({ ...prev, service: option }));
+                                    setIsDropdownOpen(false);
+                                  }}
+                                >
+                                  {option}
+                                </div>
+                              ))}
+                            </motion.div>
+                          </>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
 
                   <div className="form-group">

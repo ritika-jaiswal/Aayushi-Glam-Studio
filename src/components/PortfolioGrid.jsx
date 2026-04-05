@@ -36,8 +36,8 @@ import pw3 from '../assets/Pre_wedding_Shoots/WhatsApp Image 2026-04-05 at 4.18.
 import pw4 from '../assets/Pre_wedding_Shoots/WhatsApp Image 2026-04-05 at 4.18.42 PM.jpeg';
 
 /* Rajputana Look Imports */
-import rj1 from '../assets/Rajputana_Look/WhatsApp Image 2026-04-05 at 4.18.40 PM (2).jpeg';
-import rj2 from '../assets/Rajputana_Look/WhatsApp Image 2026-04-05 at 4.18.41 PM.jpeg';
+import rj1 from '../assets/Rajputana_Look/WhatsApp Image 2026-04-05 at 8.57.26 PM (1).jpeg';
+import rj2 from '../assets/Rajputana_Look/WhatsApp Image 2026-04-05 at 8.57.26 PM.jpeg';
 
 /* Aayushi's Pics Imports */
 import ay1 from "../assets/Aayushi_pic's/WhatsApp Image 2026-04-04 at 11.37.11 PM.jpeg";
@@ -63,10 +63,10 @@ const portfolioItems = [
   { id: 401, title: 'Soft Glam', category: 'Soft Look', images: [s1, s2, s3] },
   { id: 402, title: 'Subtle Beauty', category: 'Soft Look', images: [s4, s5] },
 
-  { id: 501, title: 'Haldi Function', category: 'Wedding Functions', images: [wf1] },
+  // { id: 501, title: 'Haldi Function', category: 'Wedding Functions', images: [wf1] },
   { id: 502, title: 'Mehendi Function Green', category: 'Wedding Functions', images: [wf2, wf3, wf4, wf5, wf6] },
 
-  { id: 601, title: 'Pre-Wedding Shoot', category: 'Pre-Wedding', images: [pw1, pw2, pw3, pw4] },
+  { id: 601, title: 'Pre-Wedding Shoot', category: 'Pre-Wedding', images: [pw3, pw4, pw1, pw2] },
 
   { id: 701, title: 'Rajputana Look', category: 'Rajputana Look', images: [rj1, rj2] },
 
