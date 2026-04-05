@@ -4,7 +4,7 @@ import './Footer.css';
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
 
@@ -25,14 +25,14 @@ const Footer = () => {
         <div className="footer-col">
           <h4 className="footer-subtitle">Find Us</h4>
           <p className="footer-contact-item">
-            <MapPin size={18} /> Pune, Maharashtra
+            <MapPin size={18} /> Indore, Madhya Pradesh
           </p>
-          <h4 className="footer-subtitle" style={{marginTop: '1.5rem'}}>Contact</h4>
+          <h4 className="footer-subtitle" style={{ marginTop: '1.5rem' }}>Contact</h4>
           <p className="footer-contact-item">
-            <Phone size={18} /> +91 XXXXX XXXXX
+            <Phone size={18} /> +91 9617616674
           </p>
           <p className="footer-contact-item">
-            <Mail size={18} /> aayushijaiswal@example.com
+            <Mail size={18} /> <a href="mailto:reetikajaiswal0911@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}> reetikajaiswal0911@gmail.com</a>
           </p>
         </div>
       </div>
