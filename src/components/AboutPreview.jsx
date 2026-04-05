@@ -27,7 +27,7 @@ const AboutPreview = () => {
         >
           <span className="section-subtitle">Meet The Artist</span>
           <h2 className="section-title">Aayushi Jaiswal</h2>
-          <h4 className="section-role">Makeup Artist, Educator & Content Creator</h4>
+          <h4 className="section-role">Makeup Artist, Educator</h4>
           <p>
             Aayushi Jaiswal is a highly sought-after makeup artist based in Indore(MP), celebrated for her ability to create flawless, elegant, and timeless bridal looks. She brings a 'Quiet Luxury' approach to her artistry, focusing on glowing skin and sophisticated details that enhance her clients' natural beauty.
           </p>
